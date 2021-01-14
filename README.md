@@ -9,16 +9,16 @@ The Federal Open Market Committee (FOMC) is the rate setting body of the Federal
 Predict interest rate changes at periods t+1 and t+2 using FOMC minutes released at period t and prior.
 
 # 3.	Methodology
-# 3.1.	Collecting the data
+## 3.1.	Collecting the data
 
 Fortunately, the FOMC minutes are relatively accessible, collected in the website of the Federal Reserve of St. Louis. Unfortunately, there is no easy way to download them in bulk, so I had to design a program that would traverse the website and scrape the relevant minutes in pdf format using Beautiful Soup. This ended up with around 1000 documents, going back to the 1920s. 
 The federal funds rate data is readily available for download back to 1954 from St. Louis Federal Reserve’s FRED website. 
 
-# 3.2.	Cleaning the texts
+## 3.2.	Cleaning the texts
 
 To prepare the texts for analysis, I removed the stop words and lemmatized the text. This method of preparation was primarily appropriate for analysis using TF-IDF preprocessing, rather than a pre-trained tool such as BERT. 
 
-# 3.3.	NLP Modeling Approach
+## 3.3.	NLP Modeling Approach
 
 In addition to a simple random forest classification model, I wanted to attempt a long short term memory model in order to capture the effect of changes in sentiment over time. For instance, saying that the economy is running hot has a very different effect on interest depending on whether this implies a rebound from low growth or a continuation of a long-running expansion. In addition, this method should capture more information resulting from the policy known as “forward guidance”, which was adopted by the Fed in the wake of the financial crisis in order to influence markets further into the future. Therefore, I approached the problem with four different methods:
 
