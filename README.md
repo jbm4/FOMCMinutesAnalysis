@@ -31,7 +31,7 @@ Finally, because the intended audience for the federal reserve minutes was chang
 
 # 4.	Results
 After finding the accuracy ratings of each of my models on the training and test set, I noted the following observations: 
-•	Using all the data, going back to 1954, I was only able to achieve a test accuracy of .72, predicting interest changes one period out using the random forest classifier with the TF-IDF model. 
-•	However, this was vastly outperformed by the model using minutes from only after 1993, which had an accuracy of .92, clearly showing that the increased efforts at transparency in the 90s had a quantifiable impact. 
-•	Predicting further out in the future was tougher, as you might expect. I was only able to achieve an accuracy of .65 using the random forest TF-IDF model for a distance of one meeting period away. This is in comparison to an implied accuracy of around .72 from futures markets.  
+1.	Using all the data, going back to 1954, I was only able to achieve a test accuracy of .72, predicting interest changes one period out using the random forest classifier with the TF-IDF model. 
+2.	However, this was vastly outperformed by the model using minutes from only after 1993, which had an accuracy of .92, clearly showing that the increased efforts at transparency in the 90s had a quantifiable impact. 
+3.	Predicting further out in the future was tougher, as you might expect. I was only able to achieve an accuracy of .65 using the random forest TF-IDF model for a distance of one meeting period away. This is in comparison to an implied accuracy of around .72 from futures markets.  
 
